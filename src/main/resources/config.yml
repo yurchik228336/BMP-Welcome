@@ -1,0 +1,16 @@
+messages:
+  - probability: 0.5
+    message:
+      - "&eПервое сообщение"
+      - "&eВторое сообщение"
+    sound: ENTITY_EXPERIENCE_BOTTLE_THROW
+  - probability: 0.3
+    message:
+      - "&eТретье сообщение"
+      - "&eЧетвертое сообщение"
+    sound: ENTITY_EXPERIENCE_BOTTLE_THROW
+  - probability: 0.2
+    message:
+      - "&eПятое сообщение"
+      - "&eШестое сообщение"
+    sound: ENTITY_EXPERIENCE_BOTTLE_THROW
