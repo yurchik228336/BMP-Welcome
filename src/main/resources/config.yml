@@ -1,9 +1,9 @@
 messages:
-  - probability: 0.5
+  - probability: 0.5 #Вероятность от 0 до 1
     message:
-      - "&eПервое сообщение"
+      - "&eПервое сообщение" #Поддержка HEX и PAPI
       - "&eВторое сообщение"
-    sound: ENTITY_EXPERIENCE_BOTTLE_THROW
+    sound: ENTITY_EXPERIENCE_BOTTLE_THROW #Любой звук (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html)
   - probability: 0.3
     message:
       - "&eТретье сообщение"

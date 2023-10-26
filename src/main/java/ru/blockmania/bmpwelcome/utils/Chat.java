@@ -1,6 +1,8 @@
 package ru.blockmania.bmpwelcome.utils;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.entity.Player;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,5 +22,9 @@ public class Chat {
         }
 
         return ChatColor.translateAlternateColorCodes('&', from);
+    }
+    public static String papi (Player p, String s){
+        s = PlaceholderAPI.setPlaceholders(p.getPlayer(), s);
+        return s;
     }
 }

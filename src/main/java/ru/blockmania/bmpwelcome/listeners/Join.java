@@ -44,7 +44,7 @@ public class Join implements Listener {
                         if (randomValue < probability) {
                             List<String> messageLines = (List<String>) messageMap.get("message");
                             for (String messageLine : messageLines) {
-                                player.sendMessage(Chat.color(messageLine));
+                                player.sendMessage(Chat.papi(player, Chat.color(messageLine)));
                             }
 
                             String soundName = (String) messageMap.get("sound");

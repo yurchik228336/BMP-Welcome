@@ -3,3 +3,4 @@ version: 0.0.2
 main: ru.blockmania.bmpwelcome.BMP_Welcome
 api-version: '1.16'
 author: BlockMania
+softdepend: [PlaceholderAPI]
