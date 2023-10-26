@@ -4,8 +4,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Config {
-    private final JavaPlugin plugin;
-    private FileConfiguration config;
+    private static JavaPlugin plugin;
+    private static FileConfiguration config;
 
     public Config(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -14,7 +14,14 @@ public class Config {
 
     }
 
-    public FileConfiguration getConfig() {
+    public static FileConfiguration getConfig() {
         return config;
+
     }
+    public static void reloadCfg() {
+        config = plugin.getConfig();
+        plugin.reloadConfig();
+    }
+
+
 }

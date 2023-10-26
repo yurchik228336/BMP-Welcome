@@ -1,3 +1,4 @@
+wait_time: 1 #Задердержка сообщения после входа
 messages:
   - probability: 0.5 #Вероятность от 0 до 1
     message:
@@ -14,3 +15,4 @@ messages:
       - "&eПятое сообщение"
       - "&eШестое сообщение"
     sound: ENTITY_EXPERIENCE_BOTTLE_THROW
+
