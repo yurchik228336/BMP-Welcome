@@ -11,6 +11,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
+import ru.blockmania.bmpwelcome.utils.Chat;
 
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Join implements Listener {
                         if (randomValue < probability) {
                             List<String> messageLines = (List<String>) messageMap.get("message");
                             for (String messageLine : messageLines) {
-                                player.sendMessage(ChatColor.translateAlternateColorCodes('&', messageLine));
+                                player.sendMessage(Chat.color(messageLine));
                             }
 
                             String soundName = (String) messageMap.get("sound");
