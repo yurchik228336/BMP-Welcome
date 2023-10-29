@@ -1,6 +1,5 @@
 package ru.blockmania.bmpwelcome.commands;
 
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,9 +8,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 import ru.blockmania.bmpwelcome.config.Config;
 import ru.blockmania.bmpwelcome.config.Localization;
-import ru.blockmania.bmpwelcome.utils.Chat;
+import ru.blockmania.bmpwelcome.utils.Formating;
 
-
+import java.text.Normalizer;
 
 public class Reload implements CommandExecutor {
     private JavaPlugin plugin;
@@ -26,15 +25,15 @@ public class Reload implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, @NotNull String[] args) {
         if (!sender.hasPermission("welcome.admin")){
             String notperm = Localization.getLocalizedString("welcome_notperm");
-            notperm = Chat.color(notperm);
-            sender.sendMessage(Chat.papi((Player) sender,notperm));
+            notperm = Formating.fullformat((Player) sender,notperm);
+            sender.sendMessage(notperm);
             return true;
         }
         if (args.length==0){
             String ussage = Localization.getLocalizedString("welcome_ussage");
             if (!ussage.isEmpty()){
-                ussage = Chat.papi((Player) sender, ussage);
-                sender.sendMessage(Chat.color(ussage));
+                ussage = Formating.fullformat((Player) sender,ussage);
+                sender.sendMessage(ussage);
 
 
             }
@@ -48,17 +47,17 @@ public class Reload implements CommandExecutor {
                     String succes = Localization.getLocalizedString("succes_reload");
 
                     if (!succes.isEmpty()){
-                        succes = Chat.papi((Player)sender,succes);
-                        sender.sendMessage(Chat.color(succes));
+                        succes = Formating.fullformat((Player) sender,succes);
+                        sender.sendMessage(succes);
                     }
-
                     break;
+
                 default:
 
                     String error = Localization.getLocalizedString("error_reload");
                     if (!error.isEmpty()){
-                        error = Chat.papi((Player)sender,error);
-                        sender.sendMessage(Chat.color(error));
+                        error = Formating.fullformat((Player) sender,error);
+                        sender.sendMessage(error);
                     }
 
                     break;

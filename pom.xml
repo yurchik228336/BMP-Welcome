@@ -6,7 +6,7 @@
 
     <groupId>ru.blockmania</groupId>
     <artifactId>BMP-Welcome</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <packaging>jar</packaging>
 
     <name>BMP-Welcome</name>
@@ -81,5 +81,4 @@
         <scope>provided</scope>
         </dependency>
     </dependencies>
-
 </project>

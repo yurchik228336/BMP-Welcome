@@ -2,7 +2,7 @@ wait_time: 1 #Задердержка сообщения после входа
 messages:
   - probability: 0.5 #Вероятность от 0 до 1
     message:
-      - "&eПервое сообщение" #Поддержка HEX и PAPI
+      - "&eПервое сообщение" #Поддержка HEX и PAPI так же есть поддержка градиента формата <#FF0000:#0000FF>
       - "&eВторое сообщение"
     sound: ENTITY_EXPERIENCE_BOTTLE_THROW #Любой звук (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html)
   - probability: 0.3
