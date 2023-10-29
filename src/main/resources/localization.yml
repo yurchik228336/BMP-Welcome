@@ -1,3 +1,4 @@
 succes_reload: "&eКонфигурация успешно перезагружена"
 error_reload: "&eКонфигурация не перезагружена, произошла ошибка"
 welcome_ussage: "&cИспользование: /welcome <reload>"
+welcome_notperm: "&cУ вас нет прав!"

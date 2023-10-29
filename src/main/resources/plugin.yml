@@ -1,5 +1,5 @@
 name: BMP-Welcome
-version: 0.0.5
+version: 0.0.6
 main: ru.blockmania.bmpwelcome.BMP_Welcome
 api-version: '1.16'
 author: BlockMania
@@ -7,3 +7,4 @@ softdepend: [PlaceholderAPI]
 commands:
   welcome:
     description: "Перезагрузка конфига"
+    permission: "welcome.admin"

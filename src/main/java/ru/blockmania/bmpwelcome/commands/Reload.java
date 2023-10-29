@@ -1,5 +1,6 @@
 package ru.blockmania.bmpwelcome.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -23,6 +24,12 @@ public class Reload implements CommandExecutor {
     }
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, @NotNull String[] args) {
+        if (!sender.hasPermission("welcome.admin")){
+            String notperm = Localization.getLocalizedString("welcome_notperm");
+            notperm = Chat.color(notperm);
+            sender.sendMessage(Chat.papi((Player) sender,notperm));
+            return true;
+        }
         if (args.length==0){
             String ussage = Localization.getLocalizedString("welcome_ussage");
             if (!ussage.isEmpty()){
